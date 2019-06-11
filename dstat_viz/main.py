@@ -12,6 +12,8 @@ def main():
                         help='Input CSV file')
     parser.add_argument('--out', type=str, default=None,
                         help='Output file name')
+    parser.add_argument('--col', type=str, default='used',
+                        help='Column name to plot the timeseries')
     parser.add_argument('cmd', nargs=argparse.REMAINDER)
     args = parser.parse_args()
 
@@ -37,14 +39,14 @@ def main():
     df.drop([7405,7406,7407,7408],inplace=True)
     #df.dropna(inplace=True)
     #print(df.used)
-    df['used'] = pd.to_numeric(df['used'])
+    df[args.col] = pd.to_numeric(df[args.col])
     #df.set_index('time', inplace=True)
     print(df.dtypes)
 
     # plot the dataframe
     assert 'used' in df.columns
-    plt.title('Memory usage')
-    plt.ylabel('bytes')
+    plt.title('Maybe memory usage ({})'.format(args.col))
+    plt.ylabel('maybe bytes')
     plt.xlabel('tick')
     plt.plot(df.used)
     plt.savefig(outfile)
