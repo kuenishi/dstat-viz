@@ -9,7 +9,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 setup(
     name='dstat-viz',
     version='0.0.0',
-    description='A sample Python project',
+    description='dstat visualizer',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/kuenishi/dstat-viz',
@@ -18,7 +18,7 @@ setup(
         'Development Status :: 3 - Alpha',
 
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Public License 2',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
