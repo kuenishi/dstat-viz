@@ -35,8 +35,8 @@ def main():
         df = None
 
     assert df is not None
-    df.drop([7373,7374,7375,7376],inplace=True)
-    df.drop([7405,7406,7407,7408],inplace=True)
+    #df.drop([7373,7374,7375,7376],inplace=True)
+    #df.drop([7405,7406,7407,7408],inplace=True)
     #df.dropna(inplace=True)
     #print(df.used)
     df[args.col] = pd.to_numeric(df[args.col])
