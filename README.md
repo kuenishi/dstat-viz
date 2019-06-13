@@ -12,3 +12,5 @@ $ dstat -tcmds --output data.csv 10
 $ dstat-viz --csv data.csv --out dstat-data.png
 $ open dstat-data.png
 ```
+
+<div align="center"><img src="https://raw.githubusercontent.com/kuenishi/dstat-viz/master/10000.png" width="400"/></div>
